@@ -11,11 +11,10 @@ export class CdkCicdStack extends cdk.Stack {
       synth: new ShellStep('Synth', {
         input: CodePipelineSource.gitHub('markjdvs/cdk-cicd', 'cicd-poc'),
         commands: [
-          'cd cdk-cicd',
           'npm ci',
           'npx cdk synth',
         ],
-        primaryOutputDirectory: 'cdk-cicd/cdk.out', // not needed here but useful
+        primaryOutputDirectory: '/cdk.out', // not needed here but useful
       }),
     });
   }
