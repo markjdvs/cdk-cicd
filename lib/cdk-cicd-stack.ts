@@ -13,8 +13,7 @@ export class CdkCicdStack extends cdk.Stack {
         commands: [
           'npm ci',
           'npx cdk synth',
-        ],
-        primaryOutputDirectory: '/cdk.out', // not needed here but useful
+        ]
       }),
     });
   }
